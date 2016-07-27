@@ -16,7 +16,8 @@
   "scripts": {
     "pretest": "jshint",
     "test": "mocha specs",
-    "coverage": "istanbul cover _mocha specs"
+    "coverage": "istanbul cover _mocha specs",
+    "postinstall": "install-engine-dependencies"
   },
   "repository": "image-size/image-size",
   "keywords": [
@@ -47,9 +48,21 @@
     "sinon": "^1.17.2"
   },
   "dependencies": {
-    "lzma": "^2.3.2"
+    "lzma": "^2.3.2",
+    "engine-dependencies": "^0.2.0"
   },
-  "optionalDependencies": {
-    "node-zlib-backport": "^0.11.15"
+  "engineDependencies": {
+    "node": {
+      "0.10.x": {
+        "devDependencies": {
+          "node-zlib-backport": "^0.11.15"
+        }
+      },
+      "0.11.x": {
+        "devDependencies": {
+          "node-zlib-backport": "^0.11.15"
+        }
+      }
+    }
   }
 }
