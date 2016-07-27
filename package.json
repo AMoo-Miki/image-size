@@ -1,14 +1,14 @@
 {
   "name": "image-size",
-  "version": "0.5.0",
-  "description": "get dimensions of any image file",
+  "version": "0.6.0",
+  "description": "get dimensions of any image or SWF file",
   "main": "lib/index.js",
   "files": [
     "bin",
     "lib"
   ],
   "engines": {
-    "node": ">=0.10.0"
+    "node": ">=0.12.0"
   },
   "bin": {
     "image-size": "bin/image-size.js"
@@ -45,5 +45,8 @@
     "jshint": "^2.8.0",
     "mocha": "^2.3.4",
     "sinon": "^1.17.2"
+  },
+  "dependencies": {
+    "lzma": "^2.3.2"
   }
 }

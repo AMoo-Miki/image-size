@@ -8,7 +8,7 @@ var imageSize = require('..');
 // Test all invalid files
 describe('Invalid Images', function () {
 
-  var invalidFiles = glob.sync('specs/images/invalid/**/*.*');
+  var invalidFiles = glob.sync('specs/+(images|swf)/invalid/**/*.*');
   invalidFiles.forEach(function (file) {
 
     describe(file, function() {
